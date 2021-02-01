@@ -5,6 +5,15 @@ function mostrar()
 {
 	
 	let nombreAlumno = prompt("Introdusca su nombre");
-	alert("Su nombre es " + nombreAlumno);
+
+	if(nombreAlumno == "")
+	{
+		alert("No ingreso su nombre");
+	}
+	else
+	{
+		alert("Su nombre es " + nombreAlumno);
+	}
+	
 }
 
