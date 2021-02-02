@@ -7,8 +7,11 @@ function sumar()
 	let numero1;
 	let numero2;
 
-	numero1 = parseInt(document.getElementById("txtIdNumeroUno").value);
-	numero2 = parseInt(document.getElementById("txtIdNumeroDos").value);
+	numero1 = document.getElementById("txtIdNumeroUno").value;
+	numero2 = document.getElementById("txtIdNumeroDos").value;
+
+	numero1 = parseInt(numero1);
+	numero2 = parseInt(numero2);
 
 	let resultado = numero1 + numero2;
 	
