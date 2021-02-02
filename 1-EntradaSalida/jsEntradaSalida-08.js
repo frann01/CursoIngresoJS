@@ -8,8 +8,8 @@ function SacarResto()
 	let numero1;
 	let numero2;
 
-	numero1 = parseInt(document.getElementById("txtIdNumeroDividendo").value);
-	numero2 = parseInt(document.getElementById("txtIdNumeroDivisor").value);
+	numero1 = parsefloat(document.getElementById("txtIdNumeroDividendo").value);
+	numero2 = parsefloat(document.getElementById("txtIdNumeroDivisor").value);
 
 	let resultado = numero1 % numero2;
 	

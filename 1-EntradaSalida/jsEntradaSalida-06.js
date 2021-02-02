@@ -10,8 +10,8 @@ function sumar()
 	numero1 = document.getElementById("txtIdNumeroUno").value;
 	numero2 = document.getElementById("txtIdNumeroDos").value;
 
-	numero1 = parseInt(numero1);
-	numero2 = parseInt(numero2);
+	numero1 = parsefloat(numero1);
+	numero2 = parsefloat(numero2);
 
 	let resultado;
 
