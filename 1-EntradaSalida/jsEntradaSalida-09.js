@@ -7,10 +7,11 @@ function mostrarAumento()
 {
 
 	let sueldoInt;
+	let resultado;
 
-	sueldoInt = parseInt(document.getElementById("txtIdSueldo").value);
+	sueldoInt = parseFloat(document.getElementById("txtIdSueldo").value);
 
-	let resultado = sueldoInt + (sueldoInt * 0.1);
+	resultado = sueldoInt + (sueldoInt * 0.1);
 	
 	document.getElementById("txtIdResultado").value = resultado;
 }
