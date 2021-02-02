@@ -13,7 +13,9 @@ function sumar()
 	numero1 = parseInt(numero1);
 	numero2 = parseInt(numero2);
 
-	let resultado = numero1 + numero2;
+	let resultado;
+
+	resultado = numero1 + numero2;
 	
 	alert("La suma es: " + resultado);
 }
