@@ -6,7 +6,7 @@ function mostrar()
 	let apellidoIng;
 	let nombreIngresado;
 	let edadingresada;
-	
+
 	apellidoIng = prompt("Cual es su apellido?");
 	nombreIngresado = document.getElementById('txtIdNombre').value;
 	edadingresada = document.getElementById('txtIdEdad').value;
