@@ -33,10 +33,11 @@ function Circulo ()
 }
 function Materiales () 
 {
-	let anchoTerreno;
 	let largoTerreno;
-	let cementoNecesario;
-	let calNecesario;
+	let anchoTerreno;
+	let cemento;
+	let cal;
+	let perimetro;
 
 	anchoTerreno = document.getElementById('txtIdAncho').value;
 	largoTerreno = document.getElementById('txtIdLargo').value;
@@ -44,8 +45,9 @@ function Materiales ()
 	anchoTerreno = parseFloat(anchoTerreno);
 	largoTerreno = parseFloat(largoTerreno);
 
-	cementoNecesario = (anchoTerreno * largoTerreno) * 2;
-	calNecesario = (anchoTerreno * largoTerreno) * 3;
+	perimetro = anchoTerreno * largoTerreno;
+	cemento = perimetro * 2;
+	cal = perimetro * 3;
 
-	alert("Se necesitan " cementoNecesario + " bolsas de cemento y " + calNecesario + " bolsas de cal.");
-}	
+	alert("Se necesitan " + cemento + " bolsas de cemento y " + cal + " de cal");
+}
