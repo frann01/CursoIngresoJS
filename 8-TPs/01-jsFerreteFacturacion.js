@@ -8,7 +8,7 @@ function Sumar ()
 	let precioUno;
 	let precioDos;
 	let precioTres;
-	let resulatado;
+	let resultado;
 
 	precioUno = document.getElementById('txtIdPrecioUno').value;
 	precioDos = document.getElementById('txtIdPrecioDos').value;
@@ -27,7 +27,7 @@ function Promedio ()
 	let precioUno;
 	let precioDos;
 	let precioTres;
-	let resulatado;
+	let resultado;
 
 	precioUno = document.getElementById('txtIdPrecioUno').value;
 	precioDos = document.getElementById('txtIdPrecioDos').value;
@@ -45,7 +45,7 @@ function PrecioFinal ()
 	let precioUno;
 	let precioDos;
 	let precioTres;
-	let resulatado;
+	let resultado;
 
 	precioUno = document.getElementById('txtIdPrecioUno').value;
 	precioDos = document.getElementById('txtIdPrecioDos').value;
@@ -58,5 +58,5 @@ function PrecioFinal ()
 	resultado = precioUno + precioDos + precioTres;
 	resultado = resultado + (resultado * 0.21);
 	
-	alert("Elprecio final es " + resultado);
+	alert("El precio final es " + resultado);
 }

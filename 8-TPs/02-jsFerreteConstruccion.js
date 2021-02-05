@@ -28,7 +28,7 @@ function Circulo ()
 	radioTerreno = document.getElementById('txtIdRadio').value;
 	radioTerreno = parseFloat(radioTerreno);
 
-	alambreNecesario = ((radioTerreno * 2) * 3.14) * 3;
+	alambreNecesario = ((radioTerreno * 2) * Math.PI) * 3;
 	alert("Se necesitan " + alambreNecesario + " metros de alambre.");
 }
 function Materiales () 
