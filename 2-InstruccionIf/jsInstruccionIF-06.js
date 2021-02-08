@@ -12,11 +12,11 @@ function mostrar()
 	{
 		if(edadIng < 18 && edadIng > 12)
 		{
-			alert("es adolescente");
+			alert("Es adolescente");
 		}
 		else
 		{
-			alert("Esun niño");
+			alert("Es un niño");
 		}
 	}
 
