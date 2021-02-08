@@ -5,13 +5,13 @@ function mostrar()
 	edadIng = document.getElementById('txtIdEdad').value;
 	edadIng = parseInt(edadIng);
 
-	if(edadIng < 18)
+	if(edadIng > 17)
 	{
-		alert("Es menor de edad");
+		alert("Es mayor de edad");
 	}
 	else
 	{
-		alert("Es mayor de edad");
+		alert("Es menor de edad");
 	}
 
 }//FIN DE LA FUNCIÓN
