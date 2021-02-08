@@ -9,9 +9,6 @@ function mostrar()
 	{
 		alert("Niña bonita");
 	}
-	else
-	{
-		alert("no");
-	}
+	
 
 }//FIN DE LA FUNCIÓN
