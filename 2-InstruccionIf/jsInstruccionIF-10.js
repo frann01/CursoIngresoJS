@@ -2,21 +2,26 @@ function mostrar()
 {
 	let numero;
 
-	numero = Math.random()*10+1;
+	numero = Math.random()*10;
 	numero = Math.round(numero);
 
 	if(numero > 8)
 	{
-		alert("nota: " + numero +" Excelente");
+		alert("Nota: " + numero +" Excelente");
 	}
-	else if(numero > 4 && numero < 9)
+	else 
 	{
-		alert("nota: " + numero +" Aprobo");
+		if(numero > 4 && numero < 9)
+		{
+			alert("Nota: " + numero +" Aprobo");
+		}
+		else
+	    {
+		    alert("Nota: " + numero + " Vamos, la proxima se puede");
+	    }
+		
 	}
-	else
-	{
-		alert("nota: " + numero + " Vamos, la proxima se puede");
-	}
+	
 	
 
 
