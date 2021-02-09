@@ -12,10 +12,12 @@ function CalcularPrecio ()
 {
  	let cantidadLamp;
  	let marcaSel;
- 	let precioFinal;
+ 	let precioDesc;
  	let precioLamp;
  	let descuento;
+ 	let IIBB;
 
+ 	IIBB = 0;
  	precioLamp = 35;
 
  	cantidadLamp = document.getElementById('txtIdCantidad').value;
@@ -38,11 +40,49 @@ function CalcularPrecio ()
  				descuento = 0.3;
  			}
  		}
+
+ 		if(cantidadLamp == 4)
+ 		{
+ 			if (marcaSel == "ArgentinaLuz" || marcaSel == "FelipeLamparas") 
+ 			{
+ 				descuento = 0.25;
+ 			}
+ 			else
+ 			{
+ 				descuento = 0.20;
+ 			}
+ 		}
+ 		if (cantidadLamp == 3) 
+ 		{
+ 			if (marcaSel == "ArgentinaLuz") 
+ 			{
+ 				descuento = 0.15;
+ 			}
+ 			if (marcaSel == "FelipeLamparas") 
+ 			{
+ 				descuento = 0.10;
+ 			}
+ 			else
+ 			{
+ 				descuento = 0.05;
+ 			}
+ 		}
  		
  	}
 
- 	precioFinal = (precioLamp * cantidadLamp);
- 	precioFinal = precioFinal - (precioFinal * descuento);
- 	
+ 	precioDesc = (precioLamp * cantidadLamp);
+ 	precioDesc = precioDesc - (precioDesc * descuento);
+
+ 	if (precioDesc > 120) 
+ 	{
+ 		precioFinal = precioDesc + (precioDesc * 0.10);
+ 		IIBB = precioDesc * 0.10;
+ 	}
+ 	else
+ 	{
+ 		precioFinal = precioDesc;
+ 	}
+
  	document.getElementById('txtIdprecioDescuento').value = precioFinal;
+ 	alert("IIBB usted pago: " + IIBB);
 }
