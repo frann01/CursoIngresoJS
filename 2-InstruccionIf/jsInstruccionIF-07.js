@@ -8,7 +8,7 @@ function mostrar()
 
 	if(edadIng < 18)
 	{
-		if(estadoCiv == "Casado" || estadoCiv == "Divorciado")
+		if(estadoCiv != "Soltero")
 		{
 			alert("Es muy pequeño para NO ser soltero");
 		}
