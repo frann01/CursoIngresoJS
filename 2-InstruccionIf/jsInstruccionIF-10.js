@@ -7,17 +7,17 @@ function mostrar()
 
 	if(numero > 8)
 	{
-		alert("Nota: " + numero +" Excelente");
+		alert("Excelente");
 	}
 	else 
 	{
 		if(numero > 4 && numero < 9)
 		{
-			alert("Nota: " + numero +" Aprobo");
+			alert("Aprobo");
 		}
 		else
 	    {
-		    alert("Nota: " + numero + " Vamos, la proxima se puede");
+		    alert("Vamos, la proxima se puede");
 	    }
 		
 	}
@@ -25,4 +25,4 @@ function mostrar()
 	
 
 
-}//FIN DE LA FUNCIÓN
+}
