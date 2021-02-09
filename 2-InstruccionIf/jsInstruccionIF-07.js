@@ -6,10 +6,12 @@ function mostrar()
 	estadoCiv = document.getElementById('estadoCivil').value;
 	edadIng = parseInt(edadIng);
 
-	if(edadIng < 18 && estadoCiv == "Casado" || estadoCiv == "Divorciado")
+	if(edadIng < 18)
 	{
-
-		alert("Es muy pequeño para NO ser soltero");
+		if(estadoCiv == "Casado" || estadoCiv == "Divorciado")
+		{
+			alert("Es muy pequeño para NO ser soltero");
+		}
 	}
 
 
