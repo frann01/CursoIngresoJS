@@ -84,6 +84,7 @@ function CalcularPrecio ()
  	{
  		precioFinal = precioDesc + (precioDesc * 0.10);
  		IIBB = precioDesc * 0.10;
+ 		alert("IIBB usted pago: " + IIBB);
  	}
  	else
  	{
@@ -91,5 +92,5 @@ function CalcularPrecio ()
  	}
 
  	document.getElementById('txtIdprecioDescuento').value = precioFinal;
- 	alert("IIBB usted pago: " + IIBB);
+ 	
 }
