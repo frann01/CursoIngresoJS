@@ -92,5 +92,4 @@ function CalcularPrecio ()
  	}
 
  	document.getElementById('txtIdprecioDescuento').value = precioFinal;
- 	
 }
