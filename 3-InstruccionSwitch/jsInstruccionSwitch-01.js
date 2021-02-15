@@ -23,6 +23,7 @@ fuction mostrar()
 
 		default:
 		alert("jajajajjodete boboooo");
+		break;
 	}
 	
 
