@@ -1,4 +1,4 @@
-function mostrar()
+fuction mostrar()
 {
 	//tomo el mes
 	var mesDelAño=txtIdMes.value;
