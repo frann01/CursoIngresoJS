@@ -1,6 +1,18 @@
 function mostrar()
 {
 	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
+	
+	switch(destinoIngresado)
+	{
+		case "Bariloche":
+		case "Ushuaia":
+		alert("Hace Frio");
+		break;
+
+		case "Cataratas":
+		case "Mar del plata":
+		alert("Hace calor");
+		break;
+	}
 
 }//FIN DE LA FUNCIÓN
