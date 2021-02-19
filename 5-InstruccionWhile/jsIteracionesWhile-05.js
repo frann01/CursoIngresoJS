@@ -7,7 +7,7 @@ function mostrar()
 
 	sexoIngresado = prompt("ingrese f ó m.");
 
-	while(sexoIngresado != 'f')
+	while(sexoIngresado != "f") // no me deja pjner otra condicion
 	{
 		sexoIngresado = prompt("ingrese f ó m.");
 	}
