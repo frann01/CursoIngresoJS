@@ -11,7 +11,7 @@ function mostrar()
 	{
 		claveIngresada = prompt("ingrese el número clave.");
 	}
-	
+	 
 	alert("Clave correcta");
 	
 }//FIN DE LA FUNCIÓN

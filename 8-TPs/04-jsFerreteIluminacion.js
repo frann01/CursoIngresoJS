@@ -21,60 +21,67 @@ function CalcularPrecio ()
  	precioLamp = 35;
 
  	cantidadLamp = document.getElementById('txtIdCantidad').value;
+ 	cantidadLamp = parseInt(cantidadLamp);
  	marcaSel = document.getElementById('Marca').value;
 
- 	if(cantidadLamp > 5)
+ 	switch(cantidadLamp)
  	{
- 		descuento = 0.5;
- 	}
- 	else
- 	{
- 		if(cantidadLamp == 5)
- 		{
- 			if(marcaSel == "ArgentinaLuz") 
+ 		case 5:
+
+ 			switch(marcaSel)
  			{
- 				descuento = 0.4;
+ 				case "ArgentinaLuz":
+ 					descuento = 0.4;
+ 					break;
+
+ 				default:
+ 					descuento = 0.3;
+ 					break;	
  			}
- 			else
+ 		break;
+ 		
+ 		case 4:
+
+ 			switch(marcaSel)
  			{
- 				descuento = 0.3;
+ 				case "ArgentinaLuz":
+ 				case "FelipeLamparas":
+ 					descuento = 0.25;
+ 					break;
+
+ 				default:
+ 					descuento = 0.2;
+ 					break;
+
  			}
- 		}
- 		else
- 		{
- 			if(cantidadLamp == 4)
- 		    {
- 			    if (marcaSel == "ArgentinaLuz" || marcaSel == "FelipeLamparas") 
- 			    {
- 				    descuento = 0.25;
- 			    }
- 			    else
- 			    {
- 				    descuento = 0.20;
- 			    }
- 			}
- 			else
+ 		break;
+ 		
+ 		case 3:
+
+ 			switch(marcaSel)
  			{
- 				if (cantidadLamp == 3) 
- 		        {
- 			        if (marcaSel == "ArgentinaLuz") 
- 			        {
- 				        descuento = 0.15;
- 			        }
- 			        else
- 			        {
- 			        	if (marcaSel == "FelipeLamparas") 
- 			            {
- 				            descuento = 0.10;
- 			            }
- 			            else
- 			            {
- 				            descuento = 0.05;
- 			            }
- 			        }
- 		        }
- 			}    
- 		}		
+ 				case "ArgentinaLuz":
+ 					descuento = 0.15;
+ 					break;
+
+ 				case "FelipeLamparas":
+ 					descuento = 0.1;
+ 					break;
+
+ 				default:
+ 					descuento = 0.05;
+ 					break;		
+ 			}
+
+ 		case 1:
+ 		case 2:
+ 			descuento = 0;
+ 			break;
+
+ 		default:
+ 			descuento = 0.5;
+ 			break;
+
  	}
 
  	precioDesc = (precioLamp * cantidadLamp);
