@@ -4,13 +4,9 @@ function mostrar()
 	var horaDelDia = txtIdHora.value;
 	horaDelDia = parseInt(horaDelDia);
 	
-	switch(horaDelDia)
+	switch(true)
 	{
-		case 7:
-		case 8:
-		case 9:
-		case 10:
-		case 11:
+		case horaDelDia > 6 && horaDelDia < 12:
 		alert("Es de mañana");
 		break;
 	}
