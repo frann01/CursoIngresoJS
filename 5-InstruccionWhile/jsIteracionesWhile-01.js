@@ -7,7 +7,7 @@ function mostrar()
 	contador = 1;
 	while(contador < 11)
 	{
-		alert(contador);
+		console.log(contador);
 		contador++;
 	}
 

@@ -8,7 +8,7 @@ function mostrar()
 	
 	while(contador > 0)
 	{
-		alert(contador);
+		console.log(contador);
 		contador--;
 	}
 
