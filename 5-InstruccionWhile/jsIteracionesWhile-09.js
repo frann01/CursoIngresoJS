@@ -7,15 +7,31 @@ function mostrar()
 	var numeroIngresado;
 	var numeroMaximo;
 	var numeroMinimo;
-	var respuesta;
-	//iniciar variables
-	banderaDelPrimero="es el primero";
 	respuesta='si';
-	while(respuesta=="si")
+
+	banderaDelPrimero = prompt("Ingrese un numero");
+	banderaDelPrimero = parseInt(banderaDelPrimero);
+	respuesta = prompt("desea continuar?");
+
+	while(respuesta == "si")
 	{
-		
-		respuesta=prompt("desea continuar?");
+		numeroIngresado = prompt("Ingrese un numero");
+		numeroIngresado = parseInt(numeroIngresado);
+
+		if(numeroIngresado < banderaDelPrimero)
+		{
+			numeroMinimo = numeroIngresado;
+		}
+
+		if(numeroIngresado > banderaDelPrimero)
+		{
+			numeroMaximo = numeroIngresado;
+		}
+
+		respuesta = prompt("desea continuar?");
+		banderaDelPrimero = numeroIngresado;
 	}
+	
 	txtIdMaximo.value=numeroMaximo;
-	txtIdMinimmo.value=numeroMinimo;
+	txtIdMinimo.value=numeroMinimo;
 }//FIN DE LA FUNCIÓN
