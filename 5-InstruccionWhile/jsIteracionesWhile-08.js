@@ -4,7 +4,6 @@ sumar los que son positivos y multiplicar los negativos.*/
 function mostrar()
 {
 	var contador;
-	var respuesta;
 	var sumaPositivos;
 	var multiplicacionNegativos;
 	contador=0;
@@ -12,6 +11,24 @@ function mostrar()
 	multiplicacionNegativos=1;
 	respuesta='si';
 
+	while(respuesta != 'no')
+	{
+		
+    	acumulador = prompt("Ingrese un numero");
+    	acumulador = parseInt(acumulador);
+
+    	if(acumulador < 0)
+    	{
+    		multiplicacionNegativos = multiplicacionNegativos * acumulador;
+    	}
+    	else
+    	{
+    		sumaPositivos = sumaPositivos + acumulador;
+    	} 
+    	
+    	contador++;
+    	respuesta = prompt("Desea continuar?");
+	}
 
 	txtIdSuma.value=sumaPositivos;
 	txtIdProducto.value=multiplicacionNegativos;
