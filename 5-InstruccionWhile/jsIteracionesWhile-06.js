@@ -17,7 +17,7 @@ function mostrar()
     	contador++;
     }
 	
-	resultado = parseInt(resultado);
+	//resultado = parseInt(resultado);
 
 	txtIdSuma.value = resultado;
 	txtIdPromedio.value = resultado/5;
