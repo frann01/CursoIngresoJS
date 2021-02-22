@@ -10,17 +10,17 @@ function mostrar()
 	var resultado;
 	contador=0;
 	acumulador=0;
-	respuesta='si';
+	respuesta=true;
 	resultado = 0;
 
-	while(respuesta !== 'si')
+	while(respuesta == true)
 	{
 		
     	acumulador = prompt("Ingrese un numero");
     	acumulador = parseInt(acumulador); 
     	resultado = resultado + acumulador;
     	contador++;
-    	respuesta = prompt("Desea continuar?");
+    	respuesta = confirm("Desea continuar?");
 	}
 
 	txtIdSuma.value=resultado;

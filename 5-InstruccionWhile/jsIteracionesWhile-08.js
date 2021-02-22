@@ -9,9 +9,9 @@ function mostrar()
 	contador=0;
 	sumaPositivos=0;
 	multiplicacionNegativos=1;
-	respuesta='si';
+	respuesta=true;
 
-	while(respuesta != 'no')
+	while(respuesta == true)
 	{
 		
     	acumulador = prompt("Ingrese un numero");
@@ -27,7 +27,7 @@ function mostrar()
     	} 
     	
     	contador++;
-    	respuesta = prompt("Desea continuar?");
+    	respuesta = confirm("Desea continuar?");
 	}
 
 	txtIdSuma.value=sumaPositivos;

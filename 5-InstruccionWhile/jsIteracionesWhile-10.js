@@ -25,9 +25,9 @@ function mostrar()
 	var diferenciaPP;
 	var cantidadPares=0;
 
-	respuesta="si";
+	respuesta=true;
 
-	while(respuesta=="si")
+	while(respuesta==true)
 	{ 
 		numeroIngresado = prompt("Ingrese un numero");
 		numeroIngresado = parseInt(numeroIngresado);
@@ -54,7 +54,7 @@ function mostrar()
 				break;		
   		}
 		
-		respuesta=prompt("desea continuar?");
+		respuesta=confirm("desea continuar?");
 	}//fin del while
 
 	promedioNegativos = sumaNegativos/cantidadNegativos;

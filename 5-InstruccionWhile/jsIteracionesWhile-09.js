@@ -7,13 +7,13 @@ function mostrar()
 	var numeroIngresado;
 	var numeroMaximo;
 	var numeroMinimo;
-	respuesta='si';
+	respuesta=true;
 
 	banderaDelPrimero = prompt("Ingrese un numero");
 	banderaDelPrimero = parseInt(banderaDelPrimero);
 	respuesta = prompt("desea continuar?");
 
-	while(respuesta == "si")
+	while(respuesta == true)
 	{
 		numeroIngresado = prompt("Ingrese un numero");
 		numeroIngresado = parseInt(numeroIngresado);
@@ -28,7 +28,7 @@ function mostrar()
 			numeroMaximo = numeroIngresado;
 		}
 
-		respuesta = prompt("desea continuar?");
+		respuesta = confirm("desea continuar?");
 		banderaDelPrimero = numeroIngresado;
 	}
 	
