@@ -13,7 +13,7 @@ function mostrar()
 	respuesta='si';
 	resultado = 0;
 
-	while(respuesta != 'no')
+	while(respuesta !== 'si')
 	{
 		
     	acumulador = prompt("Ingrese un numero");
