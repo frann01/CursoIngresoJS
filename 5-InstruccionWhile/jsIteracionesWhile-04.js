@@ -13,9 +13,7 @@ function mostrar()
 		numeroIngresado = prompt("ingrese un número entre 0 y 10.");
 	
 	}
-
 	
-
 	txtIdNumero.value = numeroIngresado;
 	
 	

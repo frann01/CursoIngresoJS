@@ -6,6 +6,7 @@ function mostrar()
 	var sexoIngresado;
 
 	sexoIngresado = prompt("ingrese f ó m.");
+	sexoIngresado = sexoIngresado.toLowerCase();
 
 	while(sexoIngresado != "f" && sexoIngresado!= "m") // no me deja pjner otra condicion
 	{
