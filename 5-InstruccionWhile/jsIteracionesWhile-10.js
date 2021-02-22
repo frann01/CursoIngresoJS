@@ -37,21 +37,23 @@ function mostrar()
     		cantidadPares++;
   		}
   		
-		if(numeroIngresado < 0)
-		{
-			sumaNegativos = sumaNegativos + numeroIngresado;
-			cantidadNegativos++;
-		}
-		if(numeroIngresado > 0)
-		{
-			sumaPositivos = sumaPositivos + numeroIngresado;
-			cantidadPositivos++;
-		}
-		if(numeroIngresado==0)
-		{
-			cantidadCeros++;
-		}
+  		switch(true)
+  		{
+  			case numeroIngresado < 0:
+  				sumaNegativos = sumaNegativos + numeroIngresado;
+				cantidadNegativos++;
+				break;
 
+			case numeroIngresado > 0:
+				sumaPositivos = sumaPositivos + numeroIngresado;
+				cantidadPositivos++;
+				break;
+
+			case numeroIngresado==0:
+				cantidadCeros++;
+				break;		
+  		}
+		
 		respuesta=prompt("desea continuar?");
 	}//fin del while
 
