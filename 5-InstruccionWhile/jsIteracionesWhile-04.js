@@ -7,10 +7,14 @@ function mostrar()
 
 	numeroIngresado = prompt("ingrese un número entre 0 y 10.");
 
-	while(numeroIngresado > 9 || numeroIngresado < 0)
+	while(isNaN(numeroIngresado) || (numeroIngresado > 9 || numeroIngresado < 0))
 	{
+		
 		numeroIngresado = prompt("ingrese un número entre 0 y 10.");
+	
 	}
+
+	
 
 	txtIdNumero.value = numeroIngresado;
 	
