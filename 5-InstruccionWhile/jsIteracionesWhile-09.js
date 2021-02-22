@@ -7,7 +7,6 @@ function mostrar()
 	var numeroIngresado;
 	var numeroMaximo;
 	var numeroMinimo;
-	var variable;
 	banderaDelPrimero=true;
 	respuesta=true;
 
