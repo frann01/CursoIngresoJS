@@ -2,8 +2,8 @@ function mostrar()
 {
 	var contador;
 	var acumulador;
-	var numeroIngresado;
 	var resultado;
+	var promedio;
 
 	contador = 0;
 	acumulador = 0;
@@ -17,10 +17,10 @@ function mostrar()
     	contador++;
     }
 	
-	//resultado = parseInt(resultado);
+	promedio= resultado/5;
 
 	txtIdSuma.value = resultado;
-	txtIdPromedio.value = resultado/5;
+	txtIdPromedio.value = promedio;
 
 
 }//FIN DE LA FUNCIÓN
