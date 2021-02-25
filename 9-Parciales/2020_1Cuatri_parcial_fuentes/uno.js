@@ -10,15 +10,18 @@ function mostrar()
 	var cantidadBarbijo=0;
 	var cantidadJabon=0;
 	var cantidadAlcohol=0;
-	var precioBarbijo;
+	var precioBarbijo; 
 	var precioJabon;
 	var precioAlcohol;
 	var fabricanteAlcohol;
 	var banderaAlcohol=true;
 	var cantidadMinimaAlcohol;
 	var promedioMayor;
+	var contadorBarbijo=0;
+	var contadorAlcohol=0;
+	var contadorJabon=0;
 
-	while(contadorProductos<3)
+	while(contadorProductos<5)
 	{
 		tipoProducto = prompt("Ingrese el tipo de producto");
 		while(tipoProducto != "barbijo" && tipoProducto != "jabon" && tipoProducto != "alcohol")
@@ -51,6 +54,7 @@ function mostrar()
 				cantidadBarbijo = cantidadBarbijo + cantidadProducto;
 				precioBarbijo = precioProducto;
 				fabricante = fabricanteBarbijo;
+				contadorBarbijo++;
 				break;
 
 			case "alcohol":
@@ -61,12 +65,14 @@ function mostrar()
 					fabricante = fabricanteAlcohol;
 				}
 				cantidadAlcohol = cantidadAlcohol + cantidadProducto;
+				contadorAlcohol++;
 				break;
 
 			case "jabon":
 				cantidadJabon = cantidadJabon + cantidadProducto;
 				precioJabon = precioProducto;
 				fabricante = fabricanteJabon;
+				contadorJabon++;
 				break;		
 		}
 
@@ -78,19 +84,19 @@ function mostrar()
 
 	if(cantidadJabon > cantidadAlcohol && cantidadJabon > cantidadBarbijo)
 	{
-		promedioMayor = cantidadJabon/precioJabon;
+		promedioMayor = cantidadJabon/contadorJabon;
 		document.write("EL producto con mas cantidad es el jabon");
 	}
 	else
 	{
 		if(cantidadBarbijo > cantidadAlcohol && cantidadBarbijo > cantidadJabon)
 		{
-			promedioMayor = cantidadBarbijo/precioBarbijo;
+			promedioMayor = cantidadBarbijo/contadorBarbijo;
 			document.write("EL producto con mas cantidad es el barbijo");
 		}
 		else
 		{
-			promedioMayor = cantidadAlcohol/precioAlcohol;
+			promedioMayor = cantidadAlcohol/contadorAlcohol;
 			document.write("EL producto con mas cantidad es el alcohol");
 		}
 	}
