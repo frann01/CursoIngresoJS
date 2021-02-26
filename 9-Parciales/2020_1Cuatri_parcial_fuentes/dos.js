@@ -22,6 +22,7 @@ function mostrar()
 
 	while(respuesta == true)
 	{
+		//Ingreso de datos
 		tipoProducto = prompt("Ingrese el tipo de producto");
 		while(tipoProducto != "cal" && tipoProducto != "arena" && tipoProducto != "cemento")
 		{
@@ -43,6 +44,7 @@ function mostrar()
 		precioTotal = precioTotal + preciomovible;
 		cantidadTotal = cantidadTotal + cantidadProducto;
 
+		//datos particulares
 		switch(tipoProducto)
 		{
 			case "cemento":
@@ -71,11 +73,12 @@ function mostrar()
 					banderaArena = false;
 				}
 				break;		
-		}
+		} 
 
 		respuesta=confirm("desea continuar?");
 	}
 
+	//sacar el descuento
 	if(cantidadTotal > 14)
 		{
 			descuento = 0.15;
@@ -92,13 +95,16 @@ function mostrar()
 			}
 		}
 
+	//a) precio total	
 	precioTotalDescuento = precioTotal - (precioTotal * descuento);
 	document.write("El precio total es "+precioTotal+"<br/>");
+	//precio con descuento
 	if(descuento > 0)
 	{
 		document.write("El precio con descuento es " + precioTotalDescuento+"<br/>");
 	}	
 
+	//tipo con mayor cantidad de bolsas
 	if(cantidadArena > cantidadCal && cantidadArena > cantidadCemento)
 	{
 		
@@ -116,6 +122,7 @@ function mostrar()
 		}
 	}
 
+	//tipo mas caro
 	if(precioMayorArena > precioMayorCal && precioMayorArena > precioMayorCemento)
 	{
 		document.write("EL producto mas caro es la arena"+"<br/>");
