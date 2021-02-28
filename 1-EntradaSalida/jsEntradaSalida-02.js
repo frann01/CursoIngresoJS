@@ -1,12 +1,4 @@
-/*pedir el ingreso de 10 mascotas 
- validar 
-tipo ( gato , perro , pájaro y otros)solo esos cuatro tipo
-raza , si es perro (pastor, toy, callejero) y si gato (siamés, turco, Peterbald , generico) y  si es de tipo "otros" o pájaro , pedir solo un texto
-edad entre 1 y 20 para gatos y perros ,  para "otros" entre 1 y 100 , para pájaro 1 de 50
-nombre ( no se permite solo numero)
-mostrar por cada tipo el nombre del  mas viejo , solo si hay de ese tipo
-mostrar que raza  de gatos tiene mas animales y el promedio de edad de esta raza
-*/
+
 function mostrar()
 {
 	var cantidadMascotas=0;

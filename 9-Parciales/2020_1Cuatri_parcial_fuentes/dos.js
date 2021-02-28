@@ -139,3 +139,12 @@ function mostrar()
 		}
 	}				
 }
+
+if(IsNaN())
+{
+	document.write("No se puede resolver");
+}
+else
+{
+	document.write("se puede resolver");
+}
