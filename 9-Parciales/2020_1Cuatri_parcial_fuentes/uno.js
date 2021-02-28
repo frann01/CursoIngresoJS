@@ -52,8 +52,6 @@ function mostrar()
 		{
 			case "barbijo":
 				cantidadBarbijo = cantidadBarbijo + cantidadProducto;
-				precioBarbijo = precioProducto;
-				fabricante = fabricanteBarbijo;
 				contadorBarbijo++;
 				break;
 
@@ -62,7 +60,7 @@ function mostrar()
 				{
 					precioAlcohol = precioProducto;
 					cantidadMinimaAlcohol = cantidadProducto;
-					fabricante = fabricanteAlcohol;
+					fabricanteAlcohol= fabricante;
 				}
 				cantidadAlcohol = cantidadAlcohol + cantidadProducto;
 				contadorAlcohol++;
@@ -70,8 +68,6 @@ function mostrar()
 
 			case "jabon":
 				cantidadJabon = cantidadJabon + cantidadProducto;
-				precioJabon = precioProducto;
-				fabricante = fabricanteJabon;
 				contadorJabon++;
 				break;		
 		}
