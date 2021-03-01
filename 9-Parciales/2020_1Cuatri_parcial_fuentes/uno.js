@@ -28,6 +28,7 @@ function mostrar()
 		while(tipoProducto != "barbijo" && tipoProducto != "jabon" && tipoProducto != "alcohol")
 		{
 			tipoProducto = prompt("Ingrese el tipo de producto");
+			tipoProducto=tipoProducto.toLowerCase();
 		}
 		
 		precioProducto = prompt("Ingrese el precio de producto");
