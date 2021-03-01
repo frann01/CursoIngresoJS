@@ -45,7 +45,7 @@ function mostrar()
 			cantidadIngresada=parseInt(cantidadIngresada);
 		}
 		acumuladorBolsas= acumuladorBolsas+cantidadIngresada;
-		totalSinDescuento= totalSinDescuento+ importeProducto;
+		totalSinDescuento= totalSinDescuento+ (importeProducto*cantidadIngresada);
 
 		if(banderaProductos== true || importeProducto > mayorPrecio)
 			{
@@ -100,7 +100,7 @@ function mostrar()
 	}
 	else
 	{
-		if(acumuladorArena > acumuladorArena && contadorOtros > acumuladorCal)
+		if(acumuladorArena > acumuladorCemento && acumuladorArena > acumuladorCal)
 		{
 			document.write("EL tipo con mas cantidad es Arena"+"<br/>");
 		}

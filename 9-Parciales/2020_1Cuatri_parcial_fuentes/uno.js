@@ -78,26 +78,26 @@ function mostrar()
 
 	}
 
-	document.write("Alcohol mas barato se compraron "+cantidadMinimaAlcohol+" del fabricante" +fabricanteAlcohol+"<br/>");
+	document.write("Del alcohol mas barato se compraron "+cantidadMinimaAlcohol+", del fabricante " +fabricanteAlcohol+"<br/>");
 
 	if(cantidadJabon > cantidadAlcohol && cantidadJabon > cantidadBarbijo)
 	{
 		promedioMayor = cantidadJabon/contadorJabon;
-		document.write("EL producto con mas cantidad es el jabon");
+		document.write("EL producto con mas cantidad es el jabon y el promedio por compra es "+promedioMayor+"<br>");
 	}
 	else
 	{
 		if(cantidadBarbijo > cantidadAlcohol && cantidadBarbijo > cantidadJabon)
 		{
 			promedioMayor = cantidadBarbijo/contadorBarbijo;
-			document.write("EL producto con mas cantidad es el barbijo");
+			document.write("EL producto con mas cantidad es el barbijo y el promedio por compra es "+promedioMayor+"<br>");
 		}
 		else
 		{
 			promedioMayor = cantidadAlcohol/contadorAlcohol;
-			document.write("EL producto con mas cantidad es el alcohol");
+			document.write("EL producto con mas cantidad es el alcohol, y el promedio por compra es "+promedioMayor+"<br>");
 		}
 	}
 
-	document.write("hay " + cantidadJabon +" cantidad de jabones");
+	document.write("hay " + cantidadJabon +" cantidad de jabones<br>");
 }
