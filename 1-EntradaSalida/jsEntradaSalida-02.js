@@ -35,9 +35,11 @@ function mostrar()
 	while(cantidadMascotas<10)
 	{
 		tipoMacota = prompt("Ingrese el tipo de mascota");
+		tipoMacota=tipoMacota.toLowerCase();
 		while(tipoMacota != "gato" && tipoMacota != "perro" && tipoMacota != "pajaro" && tipoMacota != "otros")
 		{
 			tipoMacota = prompt("Ingrese el tipo de mascota");
+			tipoMacota=tipoMacota.toLowerCase();
 		}
 		nombreIngresado = prompt("Ingrese el nombre");
 		
@@ -46,14 +48,16 @@ function mostrar()
 
 			case "perro":
 				raza = prompt("Ingrese la raza");
+				raza=raza.toLowerCase();
 				while(raza != "pastor" && raza != "toy" && raza != "callejero")
 				{	
 					raza = prompt("Ingrese la raza");
+					raza=raza.toLowerCase();
 				}
 
 				edadIngresada = prompt("Ingrese la edad");
 				edadIngresada=parseInt(edadIngresada);
-				while(edadIngresada > 20 || edadIngresada < 1)
+				while(edadIngresada > 20 || edadIngresada < 1 || isNaN(edadIngresada))
 				{
 					edadIngresada = prompt("Ingrese la edad");
 					edadIngresada=parseInt(edadIngresada);
@@ -68,14 +72,16 @@ function mostrar()
 
 			case "gato":
 				raza = prompt("Ingrese la raza");
+				raza=raza.toLowerCase();
 				while(raza != "siamés" && raza != "turco" && raza != "Peterbald" && raza != "generico")
 				{	
 					raza = prompt("Ingrese la raza");
+					raza=raza.toLowerCase();
 				}
 
 				edadIngresada = prompt("Ingrese la edad");
 				edadIngresada=parseInt(edadIngresada);
-				while(edadIngresada > 20 || edadIngresada < 1)
+				while(edadIngresada > 20 || edadIngresada < 1 || isNaN(edadIngresada))
 				{
 					edadIngresada = prompt("Ingrese la edad");
 					edadIngresada=parseInt(edadIngresada);
@@ -119,7 +125,7 @@ function mostrar()
 				raza = prompt("Ingrese la raza");
 				edadIngresada = prompt("Ingrese la edad");
 				edadIngresada=parseInt(edadIngresada);
-				while(edadIngresada > 50 || edadIngresada < 1)
+				while(edadIngresada > 50 || edadIngresada < 1 || isNaN(edadIngresada))
 				{
 					edadIngresada = prompt("Ingrese la edad");
 					edadIngresada=parseInt(edadIngresada);
@@ -138,7 +144,7 @@ function mostrar()
 				raza = prompt("Ingrese la raza");
 				edadIngresada = prompt("Ingrese la edad");
 				edadIngresada=parseInt(edadIngresada);
-				while(edadIngresada > 100 || edadIngresada < 1)
+				while(edadIngresada > 100 || edadIngresada < 1 || isNaN(edadIngresada))
 				{
 					edadIngresada = prompt("Ingrese la edad");
 					edadIngresada=parseInt(edadIngresada);

@@ -44,30 +44,34 @@ function mostrar()
 	{
 		//Ingreso de datos
 		tipoProducto = prompt("Ingrese el tipo de producto");
+		tipoProducto=tipoProducto.toLowerCase();
 		while(tipoProducto != "limpieza" && tipoProducto != "comestible" && tipoProducto != "otros")
 		{
 			tipoProducto = prompt("Ingrese el tipo de producto");
+			tipoProducto=tipoProducto.toLowerCase();
 		}
 
 		nombreProducto = prompt("Ingrese el nombre del producto");
 		
 		importeProducto = prompt("Ingrese el importe del producto");
 		importeProducto=parseInt(importeProducto);
-		while(importeProducto < 0)
+		while(importeProducto < 0 || isNaN(importeProducto))
 		{
 			importeProducto = prompt("Ingrese el importe del producto");
 			importeProducto=parseInt(importeProducto);
 		}
 
 		procedenciaProducto = prompt("Ingrese la procedencia de producto");
+		procedenciaProducto=procedenciaProducto.toLowerCase();
 		while(procedenciaProducto != "importado" && procedenciaProducto!= "elaborado" && procedenciaProducto != "nacional")
 		{
 			procedenciaProducto = prompt("Ingrese la procedencia de producto");
+			procedenciaProducto=procedenciaProducto.toLowerCase();
 		}
 
 		pesoProducto = prompt("Ingrese el peso del producto");
 		pesoProducto=parseInt(pesoProducto);
-		while(pesoProducto>30)
+		while(pesoProducto>30 || isNaN(pesoProducto))
 		{
 			pesoProducto = prompt("Ingrese el peso del producto");
 			pesoProducto=parseInt(pesoProducto);
