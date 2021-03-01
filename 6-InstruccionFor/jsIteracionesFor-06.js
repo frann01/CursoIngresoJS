@@ -1,7 +1,15 @@
 function mostrar()
 {
-	alert("ok");
+	var numero;
+	var contador=0;
 
+	numero= prompt("ingrese un numero");
+	numero=parseInt(numero);
 
-
-}//FIN DE LA FUNCIÓN
+	for(i=0;i<=numero;i=i+2)
+	{
+		document.write(i+"<br>");
+		contador++;
+	}
+	document.write("La cantidad de pares es "+contador+"<br>");
+}
