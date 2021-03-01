@@ -24,6 +24,7 @@ function mostrar()
 	while(contadorProductos<5)
 	{
 		tipoProducto = prompt("Ingrese el tipo de producto");
+		tipoProducto=tipoProducto.toLowerCase();
 		while(tipoProducto != "barbijo" && tipoProducto != "jabon" && tipoProducto != "alcohol")
 		{
 			tipoProducto = prompt("Ingrese el tipo de producto");
@@ -31,7 +32,7 @@ function mostrar()
 		
 		precioProducto = prompt("Ingrese el precio de producto");
 		precioProducto=parseInt(precioProducto);
-		while(precioProducto > 300 || precioProducto < 100)
+		while(precioProducto > 300 || precioProducto < 100 || isNaN(precioProducto))
 		{
 			precioProducto = prompt("Ingrese el precio de producto");
 			precioProducto=parseInt(precioProducto);
@@ -39,7 +40,7 @@ function mostrar()
 
 		cantidadProducto = prompt("Ingrese la cantidad de producto");
 		cantidadProducto=parseInt(cantidadProducto);
-		while(cantidadProducto < 1 || cantidadProducto > 1000)
+		while(cantidadProducto < 1 || cantidadProducto > 1000 || isNaN(cantidadProducto))
 		{
 			cantidadProducto = prompt("Ingrese la cantidad de producto");
 			cantidadProducto=parseInt(cantidadProducto);

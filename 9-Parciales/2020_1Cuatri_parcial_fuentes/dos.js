@@ -24,17 +24,24 @@ function mostrar()
 	{
 		//Ingreso de datos
 		tipoProducto = prompt("Ingrese el tipo de producto");
+		tipoProducto=tipoProducto.toLowerCase();
 		while(tipoProducto != "cal" && tipoProducto != "arena" && tipoProducto != "cemento")
 		{
 			tipoProducto = prompt("Ingrese el tipo de producto");
+			tipoProducto=tipoProducto.toLowerCase();
 		}
 
 		cantidadProducto = prompt("Ingrese la cantidad de bolsas");
 		cantidadProducto=parseInt(cantidadProducto);
+		while(isNaN(cantidadProducto))
+		{
+			cantidadProducto = prompt("Ingrese el precio por bolsa");
+			cantidadProducto=parseInt(cantidadProducto);
+		}
 		
 		precioProducto = prompt("Ingrese el precio por bolsa");
 		precioProducto=parseInt(precioProducto);
-		while(precioProducto < 0)
+		while(precioProducto < 0 ||isNaN(precioProducto))
 		{
 			precioProducto = prompt("Ingrese el precio por bolsa");
 			precioProducto=parseInt(precioProducto);

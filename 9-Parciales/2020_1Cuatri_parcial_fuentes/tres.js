@@ -22,7 +22,7 @@ function mostrar()
 
 		edadIngresada = prompt("Edad:");
 		edadIngresada = parseInt(edadIngresada);
-		while(edadIngresada < 1)
+		while(edadIngresada < 1 || isNaN(edadIngresada))
 		{
 			edadIngresada = prompt("Edad:");
 			edadIngresada = parseInt(edadIngresada);
@@ -33,15 +33,22 @@ function mostrar()
 		while(sexoIngresado != "f" && sexoIngresado!= "m") 
 		{
 			sexoIngresado = prompt("Sexo:");
+			sexoIngresado = sexoIngresado.toLowerCase();
 		}
 		
 		estadoCivilIngresado = prompt("Estado Civil:");
+		estadoCivilIngresado=estadoCivilIngresado.toLowerCase();
 		while(estadoCivilIngresado != "casado" && estadoCivilIngresado != "soltero" && estadoCivilIngresado != "viudo")
 		{
 			estadoCivilIngresado = prompt("Estado civil:");
+			estadoCivilIngresado=estadoCivilIngresado.toLowerCase();
 		}
 
 		temperaturaIngresada = prompt("Cual es su temperatura?");
+		while(isNaN(temperaturaIngresada))
+		{
+			temperaturaIngresada = prompt("Cual es su temperatura?");
+		}
 
 		if(mayorTemperatura<temperaturaIngresada || banderaMayorTemp == true)
 		{
