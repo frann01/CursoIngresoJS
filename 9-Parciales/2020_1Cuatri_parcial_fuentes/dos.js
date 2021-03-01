@@ -2,149 +2,115 @@ function mostrar()
 {
 	var respuesta=true;
 	var tipoProducto;
-	var cantidadProducto;
-	var precioProducto;
-	var descuento;
-	var totalAPagar;
-	var preciomovible;
-	var precioTotal=0;
-	var cantidadTotal=0;
-	var cantidadCal=0;
-	var cantidadCemento=0;
-	var cantidadArena=0;
-	var precioTotalDescuento;
-	var precioMayorCal;
-	var precioMayorCemento;
-	var precioMayorArena;
-	var banderaCal=true;
-	var banderaCemento=true;
-	var banderaArena=true;
+	var cantidadIngresada;
+	var importeProducto;
+	var acumuladorBolsas=0;
+	var totalSinDescuento=0;
+	var contadorCal=0;
+	var contadorArena=0;
+	var contadorCemento=0;
+	var acumuladorCal=0;
+	var acumuladorArena=0;
+	var acumuladorCemento=0;
+	var banderaProductos=true;
+	var mayorPrecio;
+	var tipoMayorPrecio;
+	var descuento=0;
+	var precioDescuento;
 
 	while(respuesta == true)
 	{
 		//Ingreso de datos
 		tipoProducto = prompt("Ingrese el tipo de producto");
 		tipoProducto=tipoProducto.toLowerCase();
-		while(tipoProducto != "cal" && tipoProducto != "arena" && tipoProducto != "cemento")
+		while(tipoProducto != "arena" && tipoProducto != "cal" && tipoProducto != "cemento")
 		{
 			tipoProducto = prompt("Ingrese el tipo de producto");
 			tipoProducto=tipoProducto.toLowerCase();
 		}
-
-		cantidadProducto = prompt("Ingrese la cantidad de bolsas");
-		cantidadProducto=parseInt(cantidadProducto);
-		while(isNaN(cantidadProducto))
-		{
-			cantidadProducto = prompt("Ingrese el precio por bolsa");
-			cantidadProducto=parseInt(cantidadProducto);
-		}
 		
-		precioProducto = prompt("Ingrese el precio por bolsa");
-		precioProducto=parseInt(precioProducto);
-		while(precioProducto < 0 ||isNaN(precioProducto))
+		importeProducto = prompt("Ingrese el importe del producto");
+		importeProducto=parseInt(importeProducto);
+		while(importeProducto < 0 || isNaN(importeProducto))
 		{
-			precioProducto = prompt("Ingrese el precio por bolsa");
-			precioProducto=parseInt(precioProducto);
+			importeProducto = prompt("Ingrese el importe del producto");
+			importeProducto=parseInt(importeProducto);
 		}
 
-		preciomovible = precioProducto * cantidadProducto;
-		precioTotal = precioTotal + preciomovible;
-		cantidadTotal = cantidadTotal + cantidadProducto;
+		cantidadIngresada = prompt("Ingrese la cantidad de bolsas");
+		cantidadIngresada=parseInt(cantidadIngresada);
+		while(isNaN(cantidadIngresada))
+		{
+			cantidadIngresada = prompt("Ingrese la cantidad de bolsas");
+			cantidadIngresada=parseInt(cantidadIngresada);
+		}
+		acumuladorBolsas= acumuladorBolsas+cantidadIngresada;
+		totalSinDescuento= totalSinDescuento+ importeProducto;
 
-		//datos particulares
+		if(banderaProductos== true || importeProducto > mayorPrecio)
+			{
+				mayorPrecio=importeProducto;
+				tipoMayorPrecio=tipoProducto;
+			}
+
 		switch(tipoProducto)
 		{
-			case "cemento":
-				cantidadCemento = cantidadCemento + cantidadProducto;
-				if(banderaCemento == true || precioMayorCemento< precioProducto)
-				{
-					precioMayorCemento = precioProducto;
-					banderaCemento = false;
-				}
-				break;
-
 			case "cal":
-				cantidadCal = cantidadCal + cantidadProducto;
-				if(banderaCal == true || precioMayorCal< precioProducto)
-				{
-					precioMayorCal = precioProducto;
-					banderaCal = false;
-				}
-				break;
+			acumuladorCal= acumuladorCal+cantidadIngresada;
+		
+			break;
 
 			case "arena":
-				cantidadArena = cantidadArena + cantidadProducto;
-				if(banderaArena == true || precioMayorArena< precioProducto)
-				{
-					precioMayorArena = precioProducto;
-					banderaArena = false;
-				}
-				break;		
-		} 
+			acumuladorArena=acumuladorArena+cantidadIngresada;
 
-		respuesta=confirm("desea continuar?");
+			break;
+
+			case "cemento":
+			acumuladorCemento=acumuladorCemento+ cantidadIngresada;
+			break;
+		}
+
+		respuesta=confirm("Desea continuar?");
 	}
 
-	//sacar el descuento
-	if(cantidadTotal > 14)
-		{
-			descuento = 0.15;
-		}
-		else
-		{
-			if(cantidadTotal > 29)
-			{
-				descuento = 0.3;
-			}
-			else
-			{
-				descuento = 0;
-			}
-		}
-
-	//a) precio total	
-	precioTotalDescuento = precioTotal - (precioTotal * descuento);
-	document.write("El precio total es "+precioTotal+"<br/>");
-	//precio con descuento
-	if(descuento > 0)
+	if(acumuladorBolsas>10 &&acumuladorBolsas<30)
 	{
-		document.write("El precio con descuento es " + precioTotalDescuento+"<br/>");
-	}	
+		descuento=0.15;
+	}
+	else
+	{
+		if(acumuladorBolsas>30)
+		{
+			descuento=0.25;
+		}
+	}
 
-	//tipo con mayor cantidad de bolsas
-	if(cantidadArena > cantidadCal && cantidadArena > cantidadCemento)
+	document.write("El total sin descuento es " + totalSinDescuento+"<br/>");
+
+	if(descuento>0)
+	{
+		precioDescuento= totalSinDescuento-(totalSinDescuento*descuento);
+		document.write("El total con descuento es " + precioDescuento+"<br/>");
+	}
+
+	if(acumuladorCal >  acumuladorCemento && acumuladorCal > acumuladorArena)
 	{
 		
-		document.write("EL producto con mas cantidad es arena"+"<br/>");
+		document.write("EL tipo con mas cantidad es Cal"+"<br/>");
 	}
 	else
 	{
-		if(cantidadCemento > cantidadCal && cantidadCemento > cantidadArena)
+		if(acumuladorArena > acumuladorArena && contadorOtros > acumuladorCal)
 		{
-			document.write("EL producto con mas cantidad es el cemento"+"<br/>");
+			document.write("EL tipo con mas cantidad es Arena"+"<br/>");
 		}
 		else
 		{
-			document.write("EL producto con mas cantidad es cal"+"<br/>");
+			document.write("EL tipo con mas cantidad es Cemento"+"<br/>");
 		}
 	}
 
-	//tipo mas caro
-	if(precioMayorArena > precioMayorCal && precioMayorArena > precioMayorCemento)
-	{
-		document.write("EL producto mas caro es la arena"+"<br/>");
-	}
-	else
-	{
-		if(precioMayorCemento > precioMayorCal && precioMayorCemento > precioMayorArena)
-		{
-			document.write("EL producto mas caro es el cemento"+"<br/>");
-		}
-		else
-		{
-			document.write("EL producto mas caro es cal"+"<br/>");
-		}
-	}				
+	document.write("EL tipo mas caro es "+tipoMayorPrecio+"<br/>");				
 }
 
 if(IsNaN())
