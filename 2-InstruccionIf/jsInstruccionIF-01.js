@@ -145,6 +145,16 @@ function mostrar()
 		}
 
 
+		//verificar un contador
+		if(contador == 0)
+		{
+			document.write("No hay negativos"+"<br/>");
+		}
+		else
+		{
+			document.write("hay "+negativoMaximo+" negativos<br/>");
+		}
+
 
 		//verificar si una variable da undefined(palabras)
 		if(variable == undefined)

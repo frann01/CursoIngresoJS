@@ -47,9 +47,9 @@ function mostrar()
 	var menorTempEnfermos;
 	var nombreTempEnfermos;
 
-	var promedioTempGatos;
-	var promedioTempPerros;
-	var promedioTempotra;
+	var promedioTempGatos=0;
+	var promedioTempPerros=0;
+	var promedioTempotra=0;
 	var acumuladorTempPerros=0;
 	var acumuladorTempGatos=0;
 	var acumuladorTempOtra=0;
@@ -60,6 +60,7 @@ function mostrar()
 	var pesoGatoLiviano;
 	var razaLiviano;
 	var NombreLiviano;
+	var contadorSinPelo=0;
 
 	while(respuesta==true)
 	{
@@ -152,6 +153,16 @@ function mostrar()
 				break;		
 		}
 
+		if(tipoPelaje=="sin pelo")
+		{
+			if(contadorSinPelo == 0 || temperaturaIngresada < menorTempEnfermos)
+			{
+				temperaturaIngresada=menorTempEnfermos;
+				nombreTempEnfermos=nombreIngresado;
+			}
+			contadorSinPelo++;
+		}
+
 		switch(estadoClinico)
 		{
 
@@ -161,11 +172,7 @@ function mostrar()
 
 			case "enfermo":
 
-				if(contadorEnfermos == 0 || temperaturaIngresada < menorTempEnfermos)
-				{
-					temperaturaIngresada=menorTempEnfermos;
-					nombreTempEnfermos=nombreIngresado;
-				}
+				
 				contadorEnfermos++;
 				break;
 
@@ -224,17 +231,51 @@ function mostrar()
 
 	if(nombrePerroPesado == undefined)
 		{
-			document.write("no"+"<br/>");
+			document.write("No hay perros"+"<br/>");
 		}
 		else
 		{
 			document.write("El perro maspesado es "+nombrePerroPesado+"<br/>");
 		}
 
+	if(ultimootra == undefined)
+		{
+			document.write("No hay mascota de tipo otra"+"<br/>");
+		}
+		else
+		{
+			document.write("El nombre de la ultima mascota de tipo cosa es "+ultimootra+"<br/>");
+		}
+
+	if(nombreTempEnfermos == undefined)
+		{
+			document.write("No hay mascota sin pelo"+"<br/>");
+		}
+		else
+		{
+			document.write("El animal sin pelo con menor temperatura es  "+nombreTempEnfermos+"<br/>");
+		}
+
+	if(isNaN(promediopeso))
+		{
+			document.write("No se pudo resolver"+"<br/>");
+		}
+		else
+		{
+			document.write("El promedio de peso es  "+promediopeso+"<br/>");
+		}
+
+	if(NombreLiviano == undefined)
+		{
+			document.write("No hay gatos"+"<br/>");
+		}
+		else
+		{
+			document.write("El nombre y raza del gato mas liviano es  "+NombreLiviano+razaLiviano+"<br/>");
+		}
+
+
 	document.write("El porcentaje de enfermos sobre el total es  "+porcentajeEnfermos+"<br/>");
-	document.write("El nombre de laultima mascota de tipo cosa es "+ultimootra+"<br/>");
-	document.write("El animal sin pelo conmenor temperatura es  "+nombreTempEnfermos+"<br/>");
 	document.write("El porcentaje de perros mas gatos sobre el total es "+promedioPerrosGatos+"<br/>");
-	document.write("El promedio de peso es  "+promediopeso+"<br/>");
-	document.write("El nombre y raza del gato mas liviano es  "+NombreLiviano+razaLiviano+"<br/>");
+
 }	
