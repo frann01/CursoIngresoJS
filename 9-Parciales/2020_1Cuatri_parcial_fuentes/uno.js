@@ -7,15 +7,18 @@ function mostrar()
 	var cantidadProducto;
 	var fabricante;
 	var marca;
+	
 	var cantidadBarbijo=0;
 	var cantidadJabon=0;
 	var cantidadAlcohol=0;
 	var precioBarbijo; 
 	var precioJabon;
 	var precioAlcohol;
+
 	var fabricanteAlcohol;
 	var banderaAlcohol=true;
 	var cantidadMinimaAlcohol;
+
 	var promedioMayor;
 	var contadorBarbijo=0;
 	var contadorAlcohol=0;

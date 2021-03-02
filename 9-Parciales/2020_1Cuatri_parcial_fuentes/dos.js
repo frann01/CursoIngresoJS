@@ -4,6 +4,7 @@ function mostrar()
 	var tipoProducto;
 	var cantidadIngresada;
 	var importeProducto;
+
 	var acumuladorBolsas=0;
 	var totalSinDescuento=0;
 	var contadorCal=0;
@@ -12,9 +13,11 @@ function mostrar()
 	var acumuladorCal=0;
 	var acumuladorArena=0;
 	var acumuladorCemento=0;
+
 	var banderaProductos=true;
 	var mayorPrecio;
 	var tipoMayorPrecio;
+	
 	var descuento=0;
 	var precioDescuento;
 
