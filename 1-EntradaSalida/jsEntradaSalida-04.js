@@ -188,12 +188,23 @@ function mostrar()
 	}
 
 	porcentajeEnfermos= (contadorEnfermos*100)/contadorMacotas;
-	promedioTempPerros=acumuladorTempPerros/contadorPerros;
-	promedioTempGatos=acumuladorTempGatos/contadorGatos;
-	promedioTempotra=acumuladorTempOtra/contadorotra;
+	if(contadorPerros>0)
+	{
+		promedioTempPerros=acumuladorTempPerros/contadorPerros;
+	}
+
+	if(contadorotra>0)
+	{
+		promedioTempotra=acumuladorTempOtra/contadorotra;
+	}
+
+	if(contadorGatos>0)
+	{
+		promedioTempGatos=acumuladorTempGatos/contadorGatos;
+	}
+	
 	promedioPerrosGatos=((contadorPerros+contadorGatos)*100)/contadorMacotas;
 	promediopeso=acumuladorPeso/contadorMacotas;
-
 
 	if(promedioTempPerros >  promedioTempGatos && promedioTempPerros > promedioTempotra)
 	{
